@@ -13,12 +13,12 @@
       <mass
         value="0.41067" />
       <inertia
-        ixx="0.00084"
+        ixx="1"
         ixy="2.8611E-20"
         ixz="-2.4187E-20"
-        iyy="0.0021619"
+        iyy="1"
         iyz="2.3129E-20"
-        izz="0.0014308" />
+        izz="1" />
     </inertial>
     <visual>
       <origin
@@ -372,9 +372,9 @@
     <leftRearJoint>jointLB</leftRearJoint>
     <rightRearJoint>jointRB</rightRearJoint>
     <wheelSeparation>0.4</wheelSeparation>
-    <wheelDiameter>0.215</wheelDiameter>
+    <wheelDiameter>0.25</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>20</torque>
+    <torque>5</torque>
     <commandTopic>turtle1/cmd_vel</commandTopic>
     <broadcastTF>true</broadcastTF>
     <odometryTopic>odom</odometryTopic>
