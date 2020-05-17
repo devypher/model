@@ -1,10 +1,10 @@
-#ROS Gazebo Simulation Model
+# ROS Gazebo Simulation Model
 
 A ROS package for gazebo simulation of a small four wheeled skid steering robot model.
 
 Current Plugins : skid_steering, laser
 
-#HOW TO USE
+# HOW TO USE
 
 Clone the package in your catkin_workspace/src
 
