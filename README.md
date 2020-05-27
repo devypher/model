@@ -24,5 +24,14 @@ $ rosrun turtlesim turtle_teleop_key
 
 Use the arrow keys to control the model.
 
-(if the robot topples in gazebo then tune the parameters in the skid_steering plugin in the URDF file.)
+# SLAM
+
+Use the mapping.launch for mapping. It uses hector mapping to create a map using the laser scan data.
+Befor using mapping.launch, first build a world in gazebo around the robot otherwise it won't work.
+After creating a world use
+ 
+$ roslaunch model mapping.launch
+
+Then use the display.launch file to open Rviz with the robot state publisher and add Map in Rviz with the topic /map.
+Now, use teleop to move the robot in gazebo and a map would be generated in Rviz.
   
