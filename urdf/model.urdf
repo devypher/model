@@ -319,7 +319,7 @@
     type="fixed">
     <origin
       xyz="-0.29589 -0.15066 0.011838"
-      rpy="0 3.14 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
@@ -337,8 +337,8 @@
           <horizontal>
             <samples>720</samples>
             <resolution>1</resolution>
-            <min_angle>-1.57</min_angle>
-            <max_angle>1.57</max_angle>
+            <min_angle>-3.14</min_angle>
+            <max_angle>3.14</max_angle>
           </horizontal>
         </scan>
         <range>
@@ -357,7 +357,7 @@
         </noise>
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-        <topicName>/rrbot/laser/scan</topicName>
+        <topicName>scan</topicName>
 	<robotNamespace>/</robotNamespace>
         <frameName>lidar</frameName>
 
@@ -373,9 +373,8 @@
     <rightRearJoint>jointRB</rightRearJoint>
     <wheelSeparation>0.4</wheelSeparation>
     <wheelDiameter>0.25</wheelDiameter>
-    <robotBaseFrame>base_link</robotBaseFrame>
     <torque>5</torque>
-    <commandTopic>turtle1/cmd_vel</commandTopic>
+    <commandTopic>cmd_vel</commandTopic>
     <broadcastTF>true</broadcastTF>
     <odometryTopic>odom</odometryTopic>
 
