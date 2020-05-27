@@ -10,7 +10,7 @@ Clone the package in your catkin_workspace/src
 
 go to the workspace and use
 
-## $ catkin_make
+#### $ catkin_make
 
 Launching the gazebo Simulation
 
