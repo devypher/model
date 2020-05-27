@@ -6,21 +6,26 @@ Current Plugins : skid_steering, laser
 
 # HOW TO USE
 
-Clone the package in your catkin_workspace/src
+Clone the package in your catkin_workspace
 
-go to the workspace and use
 
-#### $ catkin_make
+#### $ cd catkin_ws/src
+
+#### $ git clone https://github.com/Keshav-31/model
+
+#### $ cd ..
+
+##### $ catkin_make
 
 Launching the gazebo Simulation
 
-$ roslaunch model gazebo.launch
+##### $ roslaunch model gazebo.launch
 
 This launches the gazebo simulations in the empty world with the laser and skid steering plugins.
 The command Topic for the skid_steering is cmd_vel
 To launch the teleop use:
 
-$ roslaunch model teleop.launch
+##### $ roslaunch model teleop.launch
 
 Use the arrow keys to control the model.
 
@@ -30,18 +35,19 @@ Use the mapping.launch for mapping. It uses hector mapping to create a map using
 Befor using mapping.launch, first build a world in gazebo around the robot otherwise it won't work.
 After creating a world use
  
-$ roslaunch model gmapping.launch
+##### $ roslaunch model gmapping.launch
 
 Then use the display.launch file to open Rviz with the robot state publisher and add Map in Rviz with the topic /map.
 Now, use teleop to move the robot in gazebo and a map would be generated in Rviz.
 
 # Navigation
 
-1) $ roslaunch model gazebo.launch
-2) $ roslaunch model display.launch
-3) Create a world in gazebo using building editor
-4) $ roslaunch model gmapping.launch
-5) $ roslanch model model_navigation.launch
+##### $ roslaunch model gazebo.launch
+##### $ roslaunch model display.launch
+( Then create a world in gazebo using building editor.)
+
+##### $ roslaunch model gmapping.launch
+##### $ roslanch model model_navigation.launch
 
 Then use the 2D Nav Goal in rviz to send goals to move_base.
 
